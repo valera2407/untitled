@@ -19,7 +19,6 @@ public class StringArray {
     public void leftRight(){
             for (int i = 1; i < array.length; i++) {
                 String sort = array[i];
-               // System.out.println("sort " + sort);
                 int j = i;
                 while (j > 0 && (array[j - 1].compareTo(sort)>=0)) {
                     this.array[j] = this.array[j - 1];
