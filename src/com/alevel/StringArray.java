@@ -4,23 +4,23 @@ import java.util.Arrays;
 
 public class StringArray {
     String[] array;
-    public StringArray(String... bum){
-        for (String i : bum)
-            this.array = bum;
+    public StringArray(String... value){
+        for (String i : value)
+            this.array = value;
     }
     public void value(){
         String mus = Arrays.toString(array);
         System.out.println(mus + "; ");
-        for (int f = 1; f <= array.length; f++) {
-            String rot = array[f-1];
-            System.out.print(f + " number is " + rot + "; ");
+        for (int i = 1; i <= array.length; i++) {
+            String rot = array[i-1];
+            System.out.print(i + " number is " + rot + "; ");
         }System.out.println();
     }
     public void leftRight(){
-            for (int k = 1; k < array.length; k++) {
-                String sort = array[k];
+            for (int i = 1; i < array.length; i++) {
+                String sort = array[i];
                // System.out.println("sort " + sort);
-                int j = k;
+                int j = i;
                 while (j > 0 && (array[j - 1].compareTo(sort)>=0)) {
                     this.array[j] = this.array[j - 1];
                     j--;
@@ -30,14 +30,13 @@ public class StringArray {
     }
 
     public void righLeft(){
-        for (int y = 0; y < array.length/2; y++) {
-            String tmp = array[y];
-            array[y] = array[array.length - y - 1];
-            array[array.length - y - 1] = tmp;
-            for (int k = 1; k < array.length; k++) {
-                String sort = array[k];
-              //  System.out.println("sort " + sort);
-                int j = k;
+        for (int inv = 0; inv < array.length/2; inv++) {
+            String tmp = array[inv];
+            array[inv] = array[array.length - inv - 1];
+            array[array.length - inv - 1] = tmp;
+            for (int i = 1; i < array.length; i++) {
+                String sort = array[i];
+                int j = i;
                 while (j > 0 && (array[j - 1].compareTo(sort)<=0)) {
                     this.array[j] = this.array[j - 1];
                     j--;
