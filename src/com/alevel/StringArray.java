@@ -9,11 +9,11 @@ public class StringArray {
             this.array = value;
     }
     public void value(){
-        String mus = Arrays.toString(array);
-        System.out.println(mus + "; ");
+        String arrayString = Arrays.toString(array);
+        System.out.println(arrayString + "; ");
         for (int i = 1; i <= array.length; i++) {
-            String rot = array[i-1];
-            System.out.print(i + " number is " + rot + "; ");
+            String outValue = array[i-1];
+            System.out.print(i + " number is " + outValue + "; ");
         }System.out.println();
     }
     public void leftRight(){
