@@ -5,8 +5,7 @@ import java.util.Arrays;
 public class StringArray {
     String[] array;
     public StringArray(String... value){
-        for (String i : value)
-            this.array = value;
+        this.array = value;
     }
     public void value(){
         String arrayString = Arrays.toString(array);
