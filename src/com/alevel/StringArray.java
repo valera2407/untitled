@@ -29,10 +29,6 @@ public class StringArray {
     }
 
     public void righLeft(){
-        for (int inv = 0; inv < array.length/2; inv++) {
-            String tmp = array[inv];
-            array[inv] = array[array.length - inv - 1];
-            array[array.length - inv - 1] = tmp;
             for (int i = 1; i < array.length; i++) {
                 String sort = array[i];
                 int j = i;
@@ -41,7 +37,6 @@ public class StringArray {
                     j--;
                 }
                 this.array[j] = sort;
-            }
         }
 
     }
